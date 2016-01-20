@@ -1,0 +1,10 @@
+{
+	"name": "kaltura-exec-server",
+	"description" : "Exec server",
+	"version": "0.0.1",
+	"dependencies": {
+		"amqp": ">=0.2.0",
+		"node-ini": ">=1.0.0",
+		"forever": ">=0.14.1"
+	}
+}

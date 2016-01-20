@@ -1,0 +1,29 @@
+[logger]
+debugEnabled = 0
+logDir = @LOG_DIR@
+accessLogName = kaltura_exec_access.log
+logName = kaltura_exec.log
+errorLogName = kaltura_exec_error.log
+
+[server]
+version = v1.0
+
+[queue]
+; Comma-sperated list of queue managers
+providers = rabbit
+
+[queues]
+cloud-transcode = TranscodeHandler
+
+[rabbit]
+;providerType value is the exact class name
+providerType = RabbitMQProvider
+username = guest
+password = guest
+server = localhost
+port = 5672
+curl_port = 15672
+timeout = 43200000
+
+[bin]
+ffmpagPath = /opt/kaltura/bin/ffmpeg
